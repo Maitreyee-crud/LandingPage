@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Email Editor</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+<link rel="stylesheet" href="style.css">
+<script src="script.js" defer></script>
+</head>
+<body>
+  <div class="topbar">
+  <div class="left">
+    <button class="back-btn">
+      <i class="bi bi-chevron-left"></i>Back
+    </button>
+    <span>
+      <span class="draft">Draft</span> / <strong>Uber Newsletter</strong>
+    </span>
+  </div>
+
+  <div class="center-toggle">
+    <button class="toggle active" id="desktopBtn">
+      <i class="bi bi-display"></i> Desktop
+    </button>
+    <button class="toggle" id="mobileBtn">
+      <i class="bi bi-phone"></i> Mobile
+    </button>
+  </div>
+
+  <div class="right">
+    <button>Send Test Email</button>
+    <button class="save">Save Template</button>
+  </div>
+</div>
+
+  <div class="main">
+    <div class="sidebar"> 
+  <div class="tab-wrapper">
+    <div class="tabs">
+      <div class="tab active" id="designTab">Design</div>
+      <div class="tab" id="layersTab">Layers</div>
+    </div>
+    <div class="full-underline"></div>
+    <div class="tab-underline"></div>
+  </div>
+  <br>
+
+  <div class="item" style="display: block;">
+    <i class="bi bi-layout-text-window-reverse"></i>&nbsp;&nbsp;&nbsp;<span>Containers</span>
+    <i style="float: right;" class="bi bi-chevron-down"></i>
+  </div>
+
+  <hr class="sidebar-divider" />
+
+  <div class="section-title" style="display: block;"><i class="bi bi-menu-app-fill me-2"></i>&nbsp;&nbsp;<span>Content</span><i style="float: right;" class="bi bi-chevron-up "></i></div><br> 
+<div class="item" style="display: block;"><i class="bi bi-fonts"></i>&nbsp; <span>Title</span> <i style="float: right;" class="bi bi-grip-vertical "></i></div>
+  <div class="item" style="display: block;"><i class="bi bi-image-fill"></i>&nbsp; <span>Picture</span><i style="float: right;" class="bi bi-grip-vertical"></i></div> 
+  <div class="item"style="display: block;"><i class="bi bi-badge-ad"></i>&nbsp;<span>Logo</span> <i style="float: right;"class="bi bi-grip-vertical "></i></div>
+  <div class="item"style="display: block;"><i class="bi bi-square"></i>&nbsp;<span> Button </span><i style="float: right;" class="bi bi-grip-vertical "></i></div>
+  <div class="item"style="display: block;"><i class="bi bi-link"></i>&nbsp;<span>Link</span> <i style="float: right;"class="bi bi-grip-vertical"></i></div>
+  <div class="item"style="display: block;"><i class="bi bi-file-break-fill"></i>&nbsp;<span>Divider</span>  <i style="float: right;" class="bi bi-grip-vertical"></i></div>
+  <div class="item"style="display: block;"><i class="bi bi-tiktok"></i>&nbsp; <span>Social Media</span> <i style="float: right;" class="bi bi-grip-vertical"></i></div>
+  <div class="item"style="display: block;"><i class="bi bi-textarea"></i>&nbsp;<span>Footer</span> <i style="float: right;" class="bi bi-grip-vertical"></i></div>
+
+  <div class="need-help">
+    <i class="bi bi-chat-square-fill"></i> Need Help?
+  </div>
+</div>
+
+    <div class="side-panel">
+  <div class="nav-buttons">
+    <button class="arrow-btn"><i class="fas fa-chevron-up"></i></button>
+    <hr />
+    <button class="arrow-btn"><i class="fas fa-chevron-down"></i></button>
+  </div>
+  <button class="icon-btn"><i class="fas fa-cog"></i></button>
+  <button class="icon-btn delete"><i class="fas fa-trash"></i></button>
+</div>
+
+   <div class="content">
+  <div class="content-inner">
+    <div class="editor">
+      <div class="title">Uber</div><br>
+      <div class="image-outline-wrapper">
+  <img src="assets/DD2.png" alt="Uber Banner" />
+</div>
+     <br><h2>Hey <span style="background:#e0e0e0; color:#047857; padding: 2px 6px; border-radius: 8px; font-size: 16px">first_name</span></h2>
+      <p style="line-height: 1.8;">Your well-being is our top priority. To ensure a safe and secure journey, we've implemented additional safety reminders within the app.</p>
+      <button>Download PDF</button>
+      <hr style="margin: 20px 0; border: none; border-top: 1px solid #ccc;" />
+      <p style="line-height: 1.8;">These reminders are designed to keep you informed and empowered throughout every step of your experience. Whether you're a driver or a passenger, our commitment to your safety remains unwavering.</p>
+    </div>
+
+    <!-- This is the PLUS button -->
+    <div class="add-block">
+      <button>+</button>
+    </div>
+  </div>
+</div>
+<div class="properties">
+  <div class="section-title">Promo Banner 
+    <span class="badge">21</span>
+  </div>
+
+  <hr style="margin: 20px 0; border: none; border-top: 1px solid #ccc;" />
+
+  <label>Picture</label>
+  <span class="delete-icon"><i class="bi bi-trash"></i></span><br>
+  <br><div class="picture-box">
+    <img src="assets/DRAG-DROP1.png" class="preview-img">
+  </div>
+  <!-- <input type="text" value="uber_banner.png" class="filename" /> -->
+   <br>
+<div class="layer-section">
+  <div class="layer-header">
+    <label>Layer</label>
+    <i class="bi bi-eye-slash-fill"></i>
+  </div>
+  <div class="layer-control">
+    <div class="percent-wrapper">
+      <input type="number" value="100" class="percent-input" />
+      <span class="percent-symbol">%</span>
+    </div>
+    <div class="select-wrapper">
+  <select class="blend-mode">
+    <option>Normal</option>
+    <option>Multiply</option>
+    <option>Overlay</option>
+  </select>
+  <i class="bi bi-chevron-compact-down custom-arrow"></i>
+</div>
+</div>
+<br>
+  <div class="corner-radius-section">
+  <label>Corner Radius</label>
+  <div class="radius-control">
+    <input type="range" min="0" max="20" value="4" class="range-slider" id="radiusRange" />
+    <div class="radius-number-wrapper">
+      <input type="number" value="4" class="radius-number" id="radiusNumber" />
+      <span class="unit">px</span>
+    </div>
+  </div>
+</div>
+<br>
+  <div class="padding-toggle">
+  <span>Paddings</span>
+  <label class="switch">
+    <input type="checkbox" checked>
+    <span class="slider"></span>
+  </label>
+</div>
+
+<div class="paddings">
+  <div class="padding-box"><input type="number" value="24"><span>L</span></div>
+  <div class="padding-box"><input type="number" value="24"><span>R</span></div>
+  <div class="padding-box"><input type="number" value="24"><span>T</span></div>
+  <div class="padding-box"><input type="number" value="24"><span>B</span></div>
+</div>
+</div>
+  
+
+</body>
+</html>
